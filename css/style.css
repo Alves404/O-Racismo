@@ -1,0 +1,268 @@
+/* RESET BÁSICO E ESTILOS GLOBAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Habilita o scroll suave nativo */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #FFFFFF;
+    color: #111111;
+    line-height: 1.6;
+}
+
+/* UTILITÁRIOS */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-family: 'Roboto Slab', serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555555;
+    margin-bottom: 60px;
+}
+
+.content-section {
+    padding: 80px 0;
+}
+
+.section-gray {
+    background-color: #f4f4f4;
+}
+
+/* HEADER E NAVEGAÇÃO */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+.main-nav li {
+    margin: 0 20px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #000000;
+}
+
+/* SEÇÃO HERO */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-title {
+    font-family: 'Roboto Slab', serif;
+    font-size: 3rem;
+}
+
+.hero-title span {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.scroll-prompt {
+    margin-top: 40px;
+    color: #888888;
+}
+
+/* SEÇÃO DEFINIÇÕES */
+.definitions-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.card {
+    flex-basis: 30%;
+    border: 1px solid #cccccc;
+    padding: 30px;
+    text-align: center;
+}
+
+.card h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card h4 {
+    color: #555555;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+/* SEÇÃO CICLO */
+.cycle-diagram {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.cycle-step {
+    text-align: center;
+}
+
+.arrow {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* SEÇÃO VOZES */
+.testimonial {
+    max-width: 600px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.testimonial p {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #333333;
+}
+
+.testimonial footer {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #555555;
+}
+
+/* SEÇÃO AGIR (ACORDEÃO) */
+.accordion {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #cccccc;
+}
+
+.accordion-button {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    text-align: left;
+    padding: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: 'Roboto Slab', serif;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+}
+
+.accordion-button::after {
+    content: '+';
+    position: absolute;
+    right: 20px;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.accordion-button.active::after {
+    transform: rotate(45deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    padding: 0 20px;
+}
+
+.accordion-content p {
+    padding-bottom: 20px;
+}
+
+/* FOOTER */
+.main-footer {
+    background-color: #111111;
+    color: #f4f4f4;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.main-footer a {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+/* ANIMAÇÕES DE SCROLL */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#role {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+}
+
+/* RESPONSIVIDADE PARA CELULARES */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .definitions-grid {
+        flex-direction: column;
+    }
+
+    .cycle-diagram {
+        flex-direction: column;
+    }
+
+    .arrow {
+        transform: rotate(90deg);
+    }
+}
