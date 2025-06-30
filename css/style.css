@@ -244,6 +244,28 @@ body {
     text-decoration: none;
 }
 
+.btn {
+    background: black;
+    color: #fff;
+    border: 2px solid rgb(0, 0, 0); /* Define a border padrão */
+    border-radius: 15px;
+    padding: 12px 32px;
+    cursor: pointer;
+    margin: 40px auto 0 auto;
+    display: block;
+    text-align: center;
+}
+
+.btn:hover {
+    background: linear-gradient(90deg, #434343 0%, #000000 100%);
+    color: #ffffff;
+    transform: scale(1.05);
+    transition: 
+        color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
 /* RESPONSIVIDADE PARA CELULARES */
 @media (max-width: 768px) {
     .section-title {
