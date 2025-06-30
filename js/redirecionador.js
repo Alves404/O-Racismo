@@ -39,7 +39,7 @@ function executarScriptsDoConteudo() {
     const heroTextElement = document.getElementById('hero-text');
     if (heroTextElement) {
         const phrases = [
-            "Tudo começa com uma ideia simplificada.",
+            "Tudo começa com uma ideia simples.",
             "Que se transforma em um sentimento injusto.",
             "E termina em uma ação que exclui."
         ];
